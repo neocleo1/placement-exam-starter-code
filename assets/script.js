@@ -4,7 +4,7 @@ let yourName = "Shannon Stephenson" // HINT: Replace this with your own name!
 // We'll use these variables to track the counts of each cookie type
 let gb = 0      // Ginger bread
 let cc = 0      // Chocolate Chip
-let sugar = 0   // Sugar Sprinkle
+let sugar = 0   // Sugar 
 let min = 0
 
 // Code to update name display 
@@ -24,7 +24,9 @@ document.getElementById('add-gb').addEventListener('click', function() {
 })
 
 document.getElementById('minus-gb').addEventListener('click', function() {
-
+    if(gb == min){
+        return 
+    }
     gb = gb-1
     displayGb.innerHTML = gb
     displayTotal.innerHTML = sugar+cc+gb
@@ -36,6 +38,9 @@ document.getElementById('add-cc').addEventListener('click', function() {
     displayTotal.innerHTML = sugar+cc+gb
 })
 document.getElementById('minus-cc').addEventListener('click', function() {
+    if(cc == min){
+        return 
+    }
     cc = cc-1
     displayCc.innerHTML = cc
     displayTotal.innerHTML = sugar+cc+gb
@@ -49,6 +54,9 @@ document.getElementById('add-sugar').addEventListener('click', function() {
 })
 
 document.getElementById('minus-sugar').addEventListener('click', function() {
+    if(sugar == min){
+        return 
+    }
     sugar = sugar-1
     displaySugar.innerHTML = sugar
     displayTotal.innerHTML = sugar+cc+gb
